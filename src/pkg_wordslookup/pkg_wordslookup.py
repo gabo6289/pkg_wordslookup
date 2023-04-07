@@ -15,10 +15,13 @@ def clean_text(text):
 def words_lookup(input_file, input_word):
     text = load_text(input_file)
     n = 0
+    result = ""
     for line in text:
         line = clean_text(line)
         if input_word in line:
+            result = result + line
             n+=1
-        else:
-            continue
-    print("The word \"{}\" appeared {} times".format(input_word,n))
+    summary = "\nThe word \"{}\" appeared {} times".format(input_word, n)
+    result = result + summary
+    print(result)
+    return result
