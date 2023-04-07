@@ -23,5 +23,5 @@ def words_lookup(input_file, input_word):
             n+=1
     summary = "\nThe word \"{}\" appeared {} times".format(input_word, n)
     result = result + summary
-    print(result)
+    print(summary)
     return result
